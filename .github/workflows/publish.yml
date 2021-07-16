@@ -9,7 +9,7 @@ on:
 jobs:
   publish:
     name: "Publish"
-    runs-on: [self-hosted, Linux, X64]
+    runs-on: ubuntu-latest
     steps:
     - uses: icub-tech-iit/gh-action-repo-selective-sync@v1.0.0
       with:
