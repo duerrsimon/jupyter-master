@@ -1,0 +1,19 @@
+name: Publish Repo
+
+on:
+  push:
+    branches:
+    - 'main'
+  workflow_dispatch:
+
+jobs:
+  publish:
+    name: "Publish"
+    runs-on: [self-hosted, Linux, X64]
+    steps:
+    - uses: icub-tech-iit/gh-action-repo-selective-sync@v1.0.0
+      with:
+        recipe-file: '.publish/recipe.yml'
+        token-source: ${{ secrets.GITHUB_TOKEN }}
+        token-target: ${{ secrets.TARGET_PAT }}
+        sudo-passwd: ${{ secrets.SELF_HOSTED_RUNNER_PASSWD }}
