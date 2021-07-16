@@ -1,7 +1,6 @@
 source:
   copy_from:
     - "README.md"
-    - ".gitattributes"
     - ".gitignore"
     - "book"
 target:
@@ -10,7 +9,6 @@ target:
   commit_message: "publish student version"
   copy_to:
     - "README.md"
-    - ".gitattributes"
     - ".gitignore"
     - "book"
   remove_after_copy:
