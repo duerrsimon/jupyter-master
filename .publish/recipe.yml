@@ -2,7 +2,7 @@ source:
   copy_from:
     - "README.md"
     - ".gitignore"
-    - ".github/workflows/build-book.yml"
+    - "build-book.yml"
     - "requirements.txt"
     - "book"
 target:
