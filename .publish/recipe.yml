@@ -2,6 +2,7 @@ source:
   copy_from:
     - "README.md"
     - ".gitignore"
+    - "requirements.txt"
     - "book"
 target:
   repo: "duerrsimon/jb_clone_public"
@@ -10,6 +11,7 @@ target:
   copy_to:
     - "README.md"
     - ".gitignore"
+    - "requirements.txt"
     - "book"
   remove_after_copy:
     - "book/Exercises/*_instructor*"
