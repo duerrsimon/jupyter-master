@@ -2,7 +2,8 @@
 
 This is a preconfigured template to use JupyterBooks with a JupyterHub platform 
 
-You can view a preview [here](https://duerrsimon.github.io/jb_clone_public)
+You can view a preview [duerrsimon.github.io/jb_clone_public](https://duerrsimon.github.io/jb_clone_public)
+The student version is here [duerrsimon/jb_clone_public](https://github.com/duerrsimon/jb_clone_public)
 
 ## How to use locally
 
@@ -24,7 +25,7 @@ book title, footer etc.
 This is the master repository that you can choose to keep private if you want. You need to create a second repository (student version). This one you never edit directly. Instead github actions will populate it whenever you change the master repository (via a Github Action). 
 
 The workflow for deployment of the student repository is `.github/workflows/.publish.yml` (configuration in `.publish/recipe.yml`). 
-The action used is [duerrsimon/repo_selective_sync_remove_solutions v1.0.0](https://github,com/duerrsimon/repo_selective_sync_remove_solutions)
+The action used is [duerrsimon/repo_selective_sync_remove_solutions v1.0.0](https://github.com/duerrsimon/repo_selective_sync_remove_solutions)
 This workflow will copy all files to student version (except for the ones that you specify in the recipe to be removed). Additionally, all notebook cells tagged `solution` will be removed. 
 
 ![How to tag cells](https://jupyterbook.org/_images/tags_notebook.png)
