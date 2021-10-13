@@ -18,7 +18,7 @@ jobs:
         python-version: 3.7
     - name: Remove cells taged solution
       run: |
-        python json.py
+        python remove-solutions.py
     - name: Push to public student repo
       uses: duerrsimon/gh-action-repo-selective-sync@master
       with:
