@@ -27,7 +27,6 @@ bibtex_bibfiles:
 launch_buttons:
   notebook_interface        : jupyterlab  # ["classic", "jupyterlab"]
   jupyterhub_url            : "https://noto.epfl.ch"
-  binderhub_url             : ""
 
 # Information about where the book exists on the web
 repository:

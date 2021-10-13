@@ -1,7 +1,7 @@
 format: jb-book
 root: intro
 parts:
-  - caption: EPFL JupyterBook
+  - caption: JupyterBook
     chapters:
     - file: markdown
     - file: notebooks
