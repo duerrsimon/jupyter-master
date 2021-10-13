@@ -1,0 +1,4 @@
+AuthName "Only teachers"
+AuthType Basic
+AuthUserFile /path/to/root/folder/.htpasswd
+Require valid-user

@@ -1,0 +1,50 @@
+name: build-book
+
+# Only run this when the master branch changes
+on:
+  push:
+    branches:
+    - main
+
+# This job installs dependencies, build the book, and pushes it to `gh-pages`
+jobs:
+  deploy-book:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    # Install dependencies
+    - name: Set up Python 3.7
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.7
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+    # Build the book
+    - name: Build the book
+      run: |
+        jupyter-book build book 
+    - name: Create github artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: instructor book
+        path: book/_build/html/
+
+# this is if you want to deploy the results to a webserver with password protection
+# need to set the secrets in the repo settings SSH_PRIVATE_KEY/ SSH_USERNAME / SSH_HOSTNAME
+    # - name: Copy htpasswd
+      # run: |
+          # cp htaccess book/_build/html/.htaccess
+          # cp htpasswd book/_build/html/.htpasswd
+    # - name: Deploy to remote server
+      # uses: trendyminds/github-actions-rsync@master
+      # with:
+          # RSYNC_OPTIONS: -avzr --delete --exclude '.git*'
+          # RSYNC_TARGET: /full/path/deploy
+          # RSYNC_SOURCE: /book/_build/html/
+      # env:
+          # SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
+          # SSH_USERNAME: ${{secrets.SSH_USERNAME}}
+          # SSH_HOSTNAME: ${{secrets.SSH_HOSTNAME}}

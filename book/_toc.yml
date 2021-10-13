@@ -5,6 +5,5 @@ parts:
     chapters:
     - file: markdown
     - file: notebooks
-    - file: Exercises/Exercise1_student.md
-    - file: Exercises/Ex1/Ex1.md
-    - file: Exercises/Ex2/Ex2.md
+    - file: Exercises/Ex1.ipynb
+    - file: Exercises/Ex2.ipynb
