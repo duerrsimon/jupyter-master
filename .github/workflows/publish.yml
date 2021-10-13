@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Push to public student repo
-      uses: duerrsimon/repo_selective_sync_remove_solutions@master
+      uses: duerrsimon/repo_selective_sync_remove_solutions@main
       with:
         recipe-file: '.publish/recipe.yml'
         token-source: ${{ secrets.GITHUB_TOKEN }}
