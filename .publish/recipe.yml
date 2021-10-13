@@ -15,6 +15,3 @@ target:
     - ".github/workflows/build-book.yml"
     - "requirements.txt"
     - "book"
-  remove_after_copy:
-    - "book/Exercises/*_instructor*"
-    - "book/Exercises/Ex*/*_instructor*"
